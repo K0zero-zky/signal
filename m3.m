@@ -1,0 +1,10 @@
+N=0:1000;
+fs=1024;
+t=N./fs;
+y=3*sin(2*pi*t);
+x=wgn(1,1001,2);
+f1=xcorr(x);
+f2=autocorr(x);
+subplot(3,1,1),plot(x);
+subplot(3,1,2),plot(f1);
+subplot(3,1,3),plot(f2);

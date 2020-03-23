@@ -1,0 +1,10 @@
+a = [1 4 3];
+b = [2 1];
+sys = tf(b,a);
+td = 0.01;
+t = 0:td:10;
+f = 4.*sin(2*pi*t).*heaviside(t);
+f1=impulse(sys);
+y=lsim(sys,f,t);
+plot(t,y);
+grid on;
